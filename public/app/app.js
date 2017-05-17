@@ -1,4 +1,4 @@
-var app = angular.module('RecipeApp', ['ui.router', 'RecipeCtrls']);
+var app = angular.module('App', ['ui.router', 'somethingCtrls']);
 
 app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
         $urlRouterProvider.otherwise('/404');
@@ -6,18 +6,8 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: 'app/views/recipes.html',
-                controller: 'HomeCtrl'
-            })
-            .state('newRecipe', {
-                url: '/recipes/new',
-                templateUrl: 'app/views/newRecipe.html',
-                controller: 'NewCtrl'
-            })
-            .state('recipeShow', {
-                url: '/recipes/:id',
-                templateUrl: 'app/views/showRecipe.html',
-                controller: 'ShowCtrl'
+                templateUrl: 'app/views/home.html',
+
             })
             .state('signup', {
                 url: '/signup',

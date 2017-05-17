@@ -1,7 +1,4 @@
-angular.module('RecipeServices', ['ngResource'])
-    .factory('Recipe', ['$resource', function($resource) {
-        return $resource('/api/recipes/:id');
-    }])
+angular.module('somethingServices', ['ngResource'])
     .factory('Auth', ['$window', function($window) {
         //1. in factories we just return all the functions. in this case you will return an objects of functions(token)
         return {
